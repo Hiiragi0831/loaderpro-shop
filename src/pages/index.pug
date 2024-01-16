@@ -1,20 +1,33 @@
 extends @pug/base
 
 append globals
-	- pageName = 'home'
+	- pageName = 'index'
 
 append vars
 
 block content
 	.site
 		include @components/header/header
-		main.home
-			section.home__looking
+		main
+			section
 				.container
 					.row
-						include @components/product/product
-						include @components/product/product
-						include @components/product/product
-						include @components/product/product
-						include @components/product/product
+						h1 Список страниц
+						ol
+							-
+								var pages = [
+									{
+										title: 'ui',
+										href: 'ui',
+									}, {
+										title: '404',
+										href: '404',
+									}, {
+										title: 'Главная',
+										href: 'home',
+									}
+								]
+							each item in pages
+								li
+									a(href=item.href)!= item.title
 		include @components/footer/footer

@@ -39,9 +39,23 @@
 		z-index: 1;
 		width: vc(23);
 		height: vc(23);
+		cursor: pointer;
 
 		svg {
 			fill: $color-woodsmoke-400;
+			transition: fill $transition;
+		}
+
+		&.is-active {
+			svg {
+				fill: $color-tree-poppy-400;
+			}
+		}
+
+		@include hover {
+			svg {
+				fill: $color-tree-poppy-400;
+			}
 		}
 	}
 

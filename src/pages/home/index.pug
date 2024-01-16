@@ -1,0 +1,20 @@
+extends @pug/base
+
+append globals
+	- pageName = 'home'
+
+append vars
+
+block content
+	.site
+		include @components/header/header
+		main.home
+			section.home__looking
+				.container
+					.row
+						+product()
+						+product()
+						+product()
+						+product()
+						+product()
+		include @components/footer/footer

@@ -1,0 +1,21 @@
+extends @pug/base
+
+append globals
+	- pageName = 'home'
+
+append vars
+
+block content
+	.site
+		include @components/header/header
+		main.ui
+			section.ui__product
+				h1 Карточка
+				.container
+					.row
+						+product()
+						+product()
+						+product()
+						+product()
+						+product()
+		include @components/footer/footer
