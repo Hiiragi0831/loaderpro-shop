@@ -1,9 +1,10 @@
-mixin product(data)
+mixin product(data = {})
 	.product
-		.product__cache
-			+svg('cache')
-			p +30 ₽
-		.product__like
+		if data.cache
+			.product__cache
+				+svg('cache')
+				p +30 ₽
+		.product__like(class=data.heat? 'is-active': '')
 			+svg('heart')
 		.product__img
 			+picture({
@@ -17,7 +18,7 @@ mixin product(data)
 			.product__article
 				p Артикул: 322610
 		.product__main
-			.product__status.product__status--green
+			.product__status(class=`product__status--${data.status? data.status: 'green'}`)
 				span
 				p В наличии
 			.product__title

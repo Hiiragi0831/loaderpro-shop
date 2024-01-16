@@ -125,7 +125,19 @@
 
 		&--green {
 			span {
-				background: #8cc851;
+				background: $atlantis-400;
+			}
+		}
+
+		&--orange {
+			span {
+				background: $color-tree-poppy-500;
+			}
+		}
+
+		&--red {
+			span {
+				background: $red-orange-500;
 			}
 		}
 	}

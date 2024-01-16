@@ -13,9 +13,9 @@ block content
 				h1 Карточка
 				.container
 					.row
-						+product()
-						+product()
-						+product()
-						+product()
-						+product()
+						+product({heat: true, status: 'green'})
+						+product({status: 'green'})
+						+product({status: 'orange'})
+						+product({status: 'red'})
+						+product({cache: true})
 		include @components/footer/footer
