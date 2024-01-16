@@ -1,0 +1,9 @@
+.home {
+	&__looking {
+		.row {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: vc(14);
+		}
+	}
+}

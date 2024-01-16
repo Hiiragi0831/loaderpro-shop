@@ -1,0 +1,132 @@
+.product {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: vc(5);
+	padding: vc(20) vc(12);
+	box-shadow: $box-shadow;
+	background: $color-white;
+	gap: vc(12);
+
+	&__cache {
+		position: absolute;
+		left: vc(12);
+		top: vc(12);
+		z-index: 1;
+		display: flex;
+		border-radius: vc(90);
+		padding: vc(4) vc(10);
+		color: $color-white;
+		background: $color-blue;
+		gap: vc(4);
+
+		p {
+			font-weight: 500;
+			font-size: vc(14);
+		}
+
+		svg {
+			width: vc(15);
+			height: vc(15);
+			fill: $color-white;
+		}
+	}
+
+	&__like {
+		position: absolute;
+		right: vc(12);
+		top: vc(12);
+		z-index: 1;
+		width: vc(23);
+		height: vc(23);
+
+		svg {
+			fill: $color-woodsmoke-400;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: vc(220);
+
+		picture,
+		img {
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 1px solid $color-woodsmoke-200;
+		border-bottom: 1px solid $color-woodsmoke-200;
+		padding: vc(12) 0;
+	}
+
+	&__article {
+		font-size: vc(12);
+		color: $color-woodsmoke-500;
+	}
+
+	&__price {
+		display: flex;
+		align-items: baseline;
+		gap: vc(10);
+
+		p {
+			font-weight: 500;
+			font-size: vc(20);
+			color: $color-tree-poppy-400;
+		}
+
+		s {
+			font-weight: 400;
+			font-size: vc(14);
+			color: $color-woodsmoke-500;
+		}
+	}
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+		gap: vc(6);
+	}
+
+	&__status {
+		display: flex;
+		align-items: center;
+		font-size: vc(13);
+		gap: vc(6);
+
+		span {
+			flex-shrink: 0;
+			border: vc(2) solid rgba($color-white, 0.5);
+			border-radius: 100%;
+			width: vc(9);
+			height: vc(9);
+			background: $color-black;
+		}
+
+		&--green {
+			span {
+				background: #8cc851;
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: vc(16);
+	}
+
+	&__buttons {
+		display: flex;
+		gap: vc(6);
+
+		> * {
+			width: 100%;
+		}
+	}
+}

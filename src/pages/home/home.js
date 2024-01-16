@@ -1,9 +1,9 @@
-function init(container) {
-	if (container.dataset.barbaNamespace === 'home') {
+const init = () => {
+	if (document.querySelector('.home')) {
 		// eslint-disable-next-line no-console
 		console.log('home init');
 	}
-}
+};
 
 export default {
 	init,

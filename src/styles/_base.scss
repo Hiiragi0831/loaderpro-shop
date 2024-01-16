@@ -1,8 +1,8 @@
 @use 'sass:math';
 
 :root {
-	--width-base: #{$desktop-md};
-	--width-current: #{$desktop-xxl * 1px};
+	--width-base: #{$desktop-xl};
+	--width-current: #{$desktop-xl * 1px};
 	--width-multiplier: var(--width-current) / var(--width-base);
 
 	@include desktop-xxl {
@@ -30,6 +30,8 @@ html {
 
 body {
 	width: 100%;
+	font-family: $font-firaSans;
+	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
 	text-decoration-skip: objects;
 	text-rendering: optimizeLegibility;
@@ -157,7 +159,7 @@ iframe {
 	width: 100%;
 	max-width: 100%;
 	// stylelint-disable-next-line
-	max-width: vc(1400);
+	max-width: vc(1576);
 
 	@include devices {
 		padding: 0 vc(15);
