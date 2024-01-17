@@ -9,13 +9,25 @@ block content
 	.site
 		include @components/header/header
 		main.ui
-			section.ui__product
-				h1 Карточка
+			section.ui__slider
 				.container
+
+			section.ui__product
+				.container
+					h1 Карточка
 					.row
 						+product({heat: true, status: 'green'})
 						+product({status: 'green'})
 						+product({status: 'orange'})
 						+product({status: 'red'})
 						+product({cache: true})
+			section.ui__pop-category
+				.container
+					h1 Популярные категории
+					.row
+						include @components/popCategory/popCategory
+						include @components/popCategory/popCategory
+						include @components/popCategory/popCategory
+						include @components/popCategory/popCategory
+						include @components/popCategory/popCategory
 		include @components/footer/footer

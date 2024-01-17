@@ -1,5 +1,10 @@
 .ui {
-	&__product {
+	section {
+		margin-bottom: vc(50);
+	}
+
+	&__product,
+	&__pop-category {
 		.row {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

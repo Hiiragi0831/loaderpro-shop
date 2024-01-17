@@ -98,6 +98,7 @@
 		"lodash.throttle": "4.1.1",
 		"lozad": "1.16.0",
 		"ninelines-sharing": "1.5.8",
+		"swiper": "11.0.5",
 		"ua-parser-js": "1.0.33"
 	},
 	"husky": {
