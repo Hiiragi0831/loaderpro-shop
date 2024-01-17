@@ -6,6 +6,7 @@ const init = () => {
 		const mainSlider = new Swiper('.slider--main .swiper', {
 			slidesPerView: 'auto',
 			centeredSlides: true,
+			loop: true,
 		});
 	}
 };
