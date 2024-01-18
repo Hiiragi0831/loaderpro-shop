@@ -22,7 +22,8 @@ block content
 						+product({cache: true})
 			section.ui__pop-category
 				.container
-					h1 Популярные категории
+					.title
+						h1 Популярные категории
 					.row
 						include @components/popCategory/popCategory
 						include @components/popCategory/popCategory
@@ -31,7 +32,8 @@ block content
 						include @components/popCategory/popCategory
 			section.ui__category
 				.container
-					h1 Категории
+					.title
+						h1 Категории
 					.row
 						each item in data.category
 							+category(item)

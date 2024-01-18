@@ -177,3 +177,20 @@ h2,
 	font-weight: 500;
 	font-size: vc(30);
 }
+
+.title {
+	position: relative;
+	display: inline-flex;
+	margin-bottom: vc(30);
+	padding-bottom: vc(10);
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		border-radius: vc(5);
+		width: 100%;
+		height: vc(5);
+		background: $color-woodsmoke-200;
+	}
+}
