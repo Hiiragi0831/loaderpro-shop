@@ -46,12 +46,6 @@
 			transition: fill $transition;
 		}
 
-		&.is-active {
-			svg {
-				fill: $color-tree-poppy-400;
-			}
-		}
-
 		@include hover {
 			svg {
 				fill: $color-tree-poppy-400;

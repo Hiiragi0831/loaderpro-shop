@@ -1,0 +1,8 @@
+mixin category(data)
+	.category
+		+svg(`${data.icon}`)
+		p!= data.title
+		.category__wrapper
+			.category__content
+				each link in data.links
+					a(href="#")!= link

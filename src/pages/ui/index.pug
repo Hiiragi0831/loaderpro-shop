@@ -29,4 +29,10 @@ block content
 						include @components/popCategory/popCategory
 						include @components/popCategory/popCategory
 						include @components/popCategory/popCategory
+			section.ui__category
+				.container
+					h1 Категории
+					.row
+						each item in data.category
+							+category(item)
 		include @components/footer/footer
