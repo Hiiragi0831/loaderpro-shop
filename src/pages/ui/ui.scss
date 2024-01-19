@@ -12,7 +12,8 @@
 		}
 	}
 
-	&__category {
+	&__category,
+	&__article {
 		.row {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr;

@@ -1,0 +1,34 @@
+.article {
+	&__img {
+		overflow: hidden;
+		margin-bottom: vc(14);
+		border-radius: vc(10);
+		box-shadow: $box-shadow;
+	}
+
+	&__title {
+		margin-bottom: vc(10);
+		font-weight: 500;
+		font-size: vc(22);
+	}
+
+	&__date {
+		margin-bottom: vc(14);
+		font-weight: 400;
+		font-size: vc(16);
+		color: $color-woodsmoke-400;
+	}
+
+	&__description {
+		margin-bottom: vc(10);
+		font-size: vc(16);
+	}
+
+	&__link {
+		font-weight: 400;
+		font-size: vc(16);
+		line-height: 1.4;
+		text-decoration-line: underline;
+		color: $color-tree-poppy-400;
+	}
+}

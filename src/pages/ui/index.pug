@@ -37,4 +37,14 @@ block content
 					.row
 						each item in data.category
 							+category(item)
+			section.ui__article
+				.container
+					.title
+						h1 Статьи
+					.row
+						include @components/article/article
+						include @components/article/article
+						include @components/article/article
+						include @components/article/article
+
 		include @components/footer/footer
