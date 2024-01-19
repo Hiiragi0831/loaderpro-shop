@@ -1,0 +1,29 @@
+.footer {
+	background: $color-black;
+
+	&__top {
+		padding: vc(40) 0;
+	}
+
+	&__logo {
+		width: vc(278);
+		height: vc(60);
+
+		svg {
+			fill: $color-white;
+		}
+	}
+
+	&__city {
+		p {
+			font-weight: 400;
+			font-size: vc(16);
+		}
+
+		svg {
+			width: vc(32);
+			height: vc(32);
+			fill: $color-white;
+		}
+	}
+}
