@@ -1,7 +1,11 @@
 .footer {
+	color: $color-white;
 	background: $color-black;
 
 	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		padding: vc(40) 0;
 	}
 
@@ -14,16 +18,32 @@
 		}
 	}
 
-	&__city {
+	&__city,
+	&__phone {
+		display: flex;
+		gap: vc(12);
+
 		p {
 			font-weight: 400;
 			font-size: vc(16);
 		}
 
 		svg {
+			fill: $color-white;
+		}
+	}
+
+	&__city {
+		svg {
 			width: vc(32);
 			height: vc(32);
-			fill: $color-white;
+		}
+	}
+
+	&__phone {
+		svg {
+			width: vc(24);
+			height: vc(24);
 		}
 	}
 }
