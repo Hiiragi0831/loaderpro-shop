@@ -7,6 +7,11 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: vc(40) 0;
+
+		@include devices {
+			flex-direction: column;
+			gap: vc(14);
+		}
 	}
 
 	&__logo {
@@ -74,6 +79,12 @@
 		border-bottom: 1px solid $color-woodsmoke-800;
 		padding: vc(40) 0 vc(50);
 		width: 100%;
+
+		@include devices {
+			flex-direction: column;
+			text-align: center;
+			gap: vc(20);
+		}
 	}
 
 	&__links {
@@ -86,8 +97,12 @@
 		&-row {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			max-height: vc(320);
 			gap: vc(30) vc(45);
+
+			@include devices {
+				grid-template-columns: repeat(1, 1fr);
+				gap: vc(14);
+			}
 		}
 	}
 
