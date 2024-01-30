@@ -6,6 +6,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		border-bottom: 1px solid $color-woodsmoke-800;
 		padding: vc(40) 0;
 	}
 
@@ -19,7 +20,8 @@
 	}
 
 	&__city,
-	&__phone {
+	&__phone,
+	&__mail {
 		display: flex;
 		gap: vc(12);
 
@@ -28,22 +30,40 @@
 			font-size: vc(16);
 		}
 
+		a {
+			transition: opacity $transition;
+
+			@include hover {
+				opacity: 0.6;
+			}
+		}
+
 		svg {
+			width: vc(24);
+			height: vc(24);
 			fill: $color-white;
 		}
 	}
 
-	&__city {
-		svg {
-			width: vc(32);
-			height: vc(32);
-		}
+	&__socials {
+		display: flex;
+		gap: vc(16);
 	}
 
-	&__phone {
+	&__social {
+		border-radius: 100%;
+		padding: vc(5);
+		width: vc(32);
+		height: vc(32);
+		background: $color-white;
+		transition: opacity $transition;
+
 		svg {
-			width: vc(24);
-			height: vc(24);
+			fill: $color-black;
+		}
+
+		@include hover {
+			opacity: 0.6;
 		}
 	}
 }

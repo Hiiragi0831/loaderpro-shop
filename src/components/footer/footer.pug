@@ -8,5 +8,16 @@ footer.footer
 				p Санкт-Петербург
 			.footer__phone
 				+svg('phone')
-				p #[a(href="#") +7(982)570-40-44] | #[a(href="#") +7(982)570-40-44]
+				p #[a(href="tel:+7(982)570-40-44") +7(982)570-40-44] | #[a(href="tel:+7(982)570-40-44") +7(982)570-40-44]
 			.footer__mail
+				+svg('mail')
+				p #[a(href="mailto:example@gmail.com") example@gmail.com]
+			.footer__socials
+				a.footer__social(href="#")
+					+svg('vk')
+				a.footer__social(href="#")
+					+svg('tg')
+				a.footer__social(href="#")
+					+svg('wt')
+				a.footer__social(href="#")
+					+svg('youtube')
