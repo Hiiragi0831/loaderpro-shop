@@ -1,0 +1,17 @@
+mixin input(data)
+	label.form__input&attributes(attributes)
+		input(type= data.type placeholder= data.placeholder name= data.name value= data.value ? data.value: '')
+		span= data.placeholder
+
+mixin select(data)
+	label.form__select&attributes(attributes)
+		select(name= data.name)
+			if data.items
+				each item in data.items
+					option(value= item.value selected=item.selected label=item.label)= item.value
+		span= data.placeholder
+
+mixin textarea(data)
+	label.form__textarea&attributes(attributes)
+		textarea(placeholder= data.placeholder name= data.name value= data.value ? data.value: '' rows= data.rows)
+		span= data.placeholder

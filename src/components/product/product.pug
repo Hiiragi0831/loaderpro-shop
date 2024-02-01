@@ -1,5 +1,6 @@
 mixin product(data = {})
-	.product
+	form.product
+		input(type="hidden" name="id" value="322610")
 		if data.cache
 			.product__cache
 				+svg('cache')
@@ -24,7 +25,7 @@ mixin product(data = {})
 			.product__title
 				p Масло ROLF 5W30 3-SYNTHETIC A3/B4 (5л) синт. АКЦИЯ "4+1"
 		.product__buttons
-			a.button.button__outline Быстрая покупка
-			a.button.button__primary.button__icon
+			button.button.button__outline(name="fast") Быстрая покупка
+			button.button.button__primary.button__icon(type="submit" name="basket")
 				+svg('shopping-cart')
 				| В корзину

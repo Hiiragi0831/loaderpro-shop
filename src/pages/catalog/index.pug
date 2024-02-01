@@ -1,0 +1,16 @@
+extends @pug/base
+
+append globals
+	- pageName = 'home'
+
+append vars
+
+block content
+	.site
+		include @components/header/header
+		main.catalog
+			section.home__looking
+				.container
+					.row
+
+		include @components/footer/footer

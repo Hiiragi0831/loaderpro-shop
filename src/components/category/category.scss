@@ -43,12 +43,9 @@
 		width: 100%;
 		height: 100%;
 		gap: vc(14);
-		scrollbar-color: $color-white $color-white;
-		scrollbar-width: vc(5);
 
-		&::-webkit-scrollbar-thumb {
-			border-radius: vc(90);
-			background-color: $color-tree-poppy-400;
+		&::-webkit-scrollbar {
+			width: vc(10);
 		}
 
 		&::-webkit-scrollbar-track {
@@ -56,8 +53,9 @@
 			background: $color-white;
 		}
 
-		&::-webkit-scrollbar {
-			width: vc(10);
+		&::-webkit-scrollbar-thumb {
+			border-radius: vc(90);
+			background-color: $color-tree-poppy-400;
 		}
 
 		a {

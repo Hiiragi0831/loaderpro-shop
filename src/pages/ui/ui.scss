@@ -40,4 +40,16 @@
 			}
 		}
 	}
+
+	&__catalog {
+		.row {
+			display: grid;
+			grid-template-columns: 0.4fr 1.6fr;
+			gap: vc(14);
+
+			@include devices {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
 }

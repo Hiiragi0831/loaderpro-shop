@@ -13,7 +13,9 @@ block content
 				+main-slider()
 			section.ui__product
 				.container
-					h1 Карточка
+					.title
+						h1 Вы уже смотрели
+						a(href="#") Все товары
 					.row
 						+product({heat: true, status: 'green'})
 						+product({status: 'green'})
@@ -50,5 +52,73 @@ block content
 				.container
 					.row
 						include @components/advantage/advantage
+			section.ui__catalog
+				.container
+					.row
+						.catalog__filters
+							form.form
+								fieldset
+									legend Фильтры
+								+select({
+									placeholder: 'Бренд',
+									name: 'brand',
+									items: [
+										{
+											value: '0',
+											label: 'Бренд 1'
+										},
+										{
+											value: '1',
+											label: 'Бренд 2'
+										},
+										{
+											value: '2',
+											selected: true,
+											label: 'Бренд 3'
+										},
+									],
+								})
+								+select({
+									placeholder: 'Категория',
+									name: 'category',
+									items: [
+										{
+											value: '0',
+											selected: true,
+											label: 'Категория 1'
+										},
+										{
+											value: '1',
+											label: 'Категория 2'
+										},
+										{
+											value: '2',
+											label: 'Категория 3'
+										},
+									],
+								})
+								button.button.button__primary(type="submit") Применить
+						.catalog__products
+							.catalog__sort
+								p.catalog__sort-title Сортировка:
+								button.catalog__sort-item.is-active(title="Популярные") Популярные
+								button.catalog__sort-item(title="Новинки") Новинки
+								button.catalog__sort-item(title="Сначала дешевые") Сначала дешевые
+								button.catalog__sort-item(title="Сначала дорогие") Сначала дорогие
+								button.catalog__sort-item(title="Высокий рейтинг") Высокий рейтинг
+								button.catalog__sort-item(title="По размеру скидки") По размеру скидки
+							.catalog__products-row
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
 
 		include @components/footer/footer

@@ -180,17 +180,54 @@ h2,
 
 .title {
 	position: relative;
-	display: inline-flex;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
 	margin-bottom: vc(30);
 	padding-bottom: vc(10);
 
-	&::before {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		border-radius: vc(5);
-		width: 100%;
-		height: vc(5);
-		background: $color-woodsmoke-200;
+	a {
+		font-weight: 400;
+		font-size: vc(20);
+		color: $color-tree-poppy-400;
+
+		&::after {
+			content: '\2192';
+			position: relative;
+			display: inline-flex;
+			flex: none;
+			align-items: center;
+			justify-content: center;
+			margin-left: vc(14);
+			border-radius: 100%;
+			width: vc(30);
+			height: vc(30);
+			color: $color-white;
+			background: $color-tree-poppy-400;
+			transition: transform $transition;
+		}
+
+		@include hover {
+			&::after {
+				transform: translateX(vc(5));
+			}
+		}
+	}
+
+	h1,
+	h2,
+	h3, {
+		position: relative;
+		display: inline-flex;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			border-radius: vc(5);
+			width: 100%;
+			height: vc(5);
+			background: $color-woodsmoke-200;
+		}
 	}
 }
