@@ -1,0 +1,44 @@
+extends @pug/base
+
+append globals
+	- pageName = 'home'
+
+append vars
+
+block content
+	.site
+		include @components/header/header
+		main
+			section.commodity
+				.container
+					.row
+						.commodity__head
+							.commodity__title
+								h1 Название товара
+							.commodity__availability.commodity__availability--green
+								span
+								p В наличии ( 18 шт )
+							.commodity__article
+								p #[b Артикул:] 8776549823
+						.commodity__main
+							.commodity__gallery
+								.commodity__gallery-main
+									.swiper
+										.swiper-wrapper
+											each slide in [1, 2, 3, 4, 5, 6, 7, 8]
+												.swiper-slide
+													+picture({
+														path: `${baseDir}assets/images/image_1`,
+														ext: 'png',
+													})
+								.commodity__gallery-thumb
+									.swiper
+										.swiper-wrapper
+											each slide in [1, 2, 3, 4, 5, 6, 7, 8]
+												.swiper-slide
+													+picture({
+														path: `${baseDir}assets/images/image_1`,
+														ext: 'png',
+													})
+
+		include @components/footer/footer

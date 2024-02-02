@@ -15,6 +15,7 @@ import lazyBlur from './modules/lazyBlur';
 import home from '../pages/home/home';
 import sharing from '../components/sharing/sharing';
 import slider from '../components/slider/slider';
+import commodity from '../pages/commodity/commodity';
 
 // eslint-disable-next-line no-underscore-dangle
 window._debounce = debounce;
@@ -48,6 +49,7 @@ const init = () => {
 	sharing.init();
 	home.init();
 	slider.init();
+	commodity.init();
 
 	resizeWidth = innerWidth;
 	window.addEventListener('resize', _debounce(resize, 500));

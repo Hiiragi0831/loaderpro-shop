@@ -1,0 +1,134 @@
+.commodity {
+	padding-bottom: vc(60);
+
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__title {
+		position: relative;
+		margin-bottom: vc(22);
+		width: 100%;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			border-radius: vc(5);
+			width: 100%;
+			height: vc(5);
+			background: $color-woodsmoke-200;
+		}
+	}
+
+	&__availability {
+		display: flex;
+		align-items: center;
+		font-weight: 400;
+		font-size: vc(18);
+		line-height: 1.2;
+		gap: vc(6);
+
+		span {
+			flex-shrink: 0;
+			border: vc(3) solid rgba($color-white, 0.5);
+			border-radius: 100%;
+			width: vc(14);
+			height: vc(14);
+			background: $color-black;
+		}
+
+		&--green {
+			span {
+				background: $atlantis-400;
+			}
+		}
+
+		&--orange {
+			span {
+				background: $color-tree-poppy-500;
+			}
+		}
+
+		&--red {
+			span {
+				background: $red-orange-500;
+			}
+		}
+	}
+
+	&__article {
+		font-size: vc(18);
+	}
+
+	&__main {
+		position: relative;
+		display: grid;
+		grid-template-columns: vc(656) 1fr;
+		margin-top: vc(40);
+		gap: vc(30);
+	}
+
+	&__gallery {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		border: 1px solid $color-woodsmoke-200;
+		border-radius: vc(5);
+		height: vc(582);
+
+		picture {
+			overflow: hidden;
+			height: 100%;
+
+			img {
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+
+		&-main {
+			border-bottom: 1px solid $color-woodsmoke-200;
+			height: vc(472);
+
+			.swiper {
+				height: 100%;
+			}
+		}
+
+		&-thumb {
+			width: calc(100% + #{vc(15)});
+
+			.swiper-slide {
+				position: relative;
+				padding-right: vc(15);
+				opacity: 0.7;
+				transition: opacity $transition;
+
+				&::before {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					z-index: 2;
+					border-radius: vc(3);
+					width: calc(100% - #{vc(15)});
+					height: vc(3);
+					background: transparent;
+					transition: background $transition;
+				}
+			}
+
+			.swiper-slide-thumb-active {
+				opacity: 1;
+
+				&::before {
+					background: $color-tree-poppy-400;
+				}
+			}
+		}
+	}
+}
