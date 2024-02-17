@@ -21,6 +21,8 @@
 			}
 
 			.slider__content {
+				position: relative;
+				overflow: hidden;
 				border-radius: vc(10);
 			}
 
