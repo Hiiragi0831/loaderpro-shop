@@ -1,14 +1,15 @@
-.article
-	.article__img
-		+picture({
-			path: `${baseDir}assets/images/news`,
-			ext: 'png',
-		})
-	.article__title
-		p Название статьи
-	.article__date
-		p 15.02.2022
-	.article__description
-		p В последнее время на рынке, большое распространение получили электрокамины...
-	.article__link
-		p Подробнее
+mixin article(data = {})
+	.article
+		.article__img
+			+picture({
+				path: `${baseDir}assets/images/news`,
+				ext: 'png',
+			})
+		.article__title
+			p!= data.title
+		.article__date
+			p 15.02.2022
+		.article__description
+			p!= data.text
+		.article__link
+			p Подробнее

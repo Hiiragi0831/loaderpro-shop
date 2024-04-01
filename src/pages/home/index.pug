@@ -9,12 +9,51 @@ block content
 	.site
 		include @components/header/header
 		main.home
-			section.home__looking
+			section.home__slider
+				+main-slider()
+			section.home__pop-category
 				.container
+					.title
+						h1 Популярные категории
+					.row
+						include @components/popCategory/popCategory
+						include @components/popCategory/popCategory
+						include @components/popCategory/popCategory
+						include @components/popCategory/popCategory
+						include @components/popCategory/popCategory
+			section.home__product
+				.container
+					.title
+						h1 Часто ищут
+						a(href="#") Все товары
+					.row
+						+product({heat: true, status: 'green'})
+						+product({status: 'green'})
+						+product({status: 'orange'})
+						+product({status: 'red'})
+						+product({cache: true})
+			section.home__product
+				.container
+					.title
+						h1 В наличии
+						a(href="#") Все товары
 					.row
 						+product()
 						+product()
 						+product()
 						+product()
 						+product()
+			section.home__advantage
+				.container
+					.row
+						include @components/advantage/advantage
+			section.home__article
+				.container
+					.title
+						h1 Полезная информация
+					.row
+						+article({title: 'Как выбрать тележку для склада?', text: 'Если вам необходимо выбрать гидравлическую тележку для склада - ознакомьтесь с рекоме...'})
+						+article({title: 'Правила хранения запчастей', text: 'Хранение и обслуживание запчастей играет критическую роль в обеспечении эффективной...'})
+						+article({title: '5 ошибок при ремонте погрузчика', text: 'Мы собрали 5 самых распространенных ошибок, которые допускают во время ремонта вилочных...'})
+						+article({title: '10 фактов о погрузчиках', text: 'Интересные факты о вилочных погрузчиках которые вы могли не знать...'})
 		include @components/footer/footer

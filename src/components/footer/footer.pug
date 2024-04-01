@@ -5,13 +5,13 @@ footer.footer
 				+svg('logo')
 			.footer__city
 				+svg('pin')
-				p Санкт-Петербург
+				p Российская Федерация
 			.footer__phone
 				+svg('phone')
-				p #[a(href="tel:+7(982)570-40-44") +7(982)570-40-44] | #[a(href="tel:+7(982)570-40-44") +7(982)570-40-44]
+				p #[a(href="tel:8 (800) 551-19-96") 8 (800) 551-19-96] | #[a(href="tel:+7 (812) 642-12-56") +7 (812) 642-12-56]
 			.footer__mail
 				+svg('mail')
-				p #[a(href="mailto:example@gmail.com") example@gmail.com]
+				p #[a(href="mailto:zakaz@loaderpro.ru") zakaz@loaderpro.ru]
 			.footer__socials
 				a.footer__social(href="#")
 					+svg('vk')
@@ -24,13 +24,18 @@ footer.footer
 		.footer__main
 			.footer__links.footer__links--navigation
 				p.footer__links-head Навигация
-				.footer__links-row
+				.footer__links-row.footer__links-row--2
 					each link in ['Главная', 'О компании', 'Клиентам', 'Способы оплаты', 'Частые вопросы', 'Отзывы', 'Новости и статьи', 'Контакты']
 						a.footer__link(href="#")!= link
+				.footer__ya
+					+picture({
+						path: `${baseDir}assets/images/ya`,
+						ext: 'png',
+					})
 			.footer__links.footer__links--catalog
 				p.footer__links-head Каталог
 				.footer__links-row
-					each link in ['Запчасти двигателя', 'Запчасти рулевого управления', 'Запчасти корпуса', 'Запчасти системы охлаждения', 'Запчасти шасси', 'Шины и диски', 'Фильтры', 'Запчасти мачт', 'Комплектующие и акссесуары', 'Запчасти трансмиссии', 'Запчасти электрики', 'Вилы и навесное оборудование', 'Запчасти гидравлики', 'Запчасти ведущего моста', 'Комплекты для ТО', 'Запчасти тормозной системы']
+					each link in ['Запчасти JUNGHEINRICH', 'Запчасти CLARK', 'Запчасти OM PIMESPO', 'Запчасти STILL', 'Запчасти MERLO', 'Запчасти  NOBLELIFT', 'Запчасти LINDE', 'Запчасти HYSTER', 'Запчасти BOBCAT', 'Запчасти COMBILIFT', 'Запчасти CROWN', 'Запчасти TERBERG', 'Запчасти KALMAR', 'Запчасти BT', 'Запчасти YALE', 'Весь каталог']
 						a.footer__link(href="#")!= link
 		.footer__bottom
-			p Все права защищены. 2023
+			p Все права защищены. 2024
