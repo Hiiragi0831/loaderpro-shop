@@ -60,10 +60,11 @@
 		}
 
 		.advantage__img {
-			right: vc(-20);
-			top: vc(20);
-			width: vc(650);
-			transform: rotate(-8deg);
+			right: vc(-30);
+			bottom: vc(-20);
+			z-index: -1;
+			width: vc(565);
+			transform: rotate(-2deg);
 		}
 	}
 

@@ -5,7 +5,7 @@
 	--width-current: #{$desktop-xl * 1px};
 	--width-multiplier: var(--width-current) / var(--width-base);
 
-	@include desktop-xxl {
+	@include desktop-xl {
 		--width-current: 100vw;
 	}
 
