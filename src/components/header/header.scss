@@ -1,0 +1,146 @@
+.header {
+	&__logo {
+		width: vc(240);
+		height: vc(70);
+
+		svg {
+			fill: $color-black;
+		}
+	}
+
+	&__search {
+		label {
+			position: relative;
+			display: flex;
+			align-items: center;
+			border: 1px solid $color-woodsmoke-300;
+			border-radius: vc(5);
+			padding: vc(20);
+
+			input {
+				width: 100%;
+			}
+
+			button {
+				position: absolute;
+				right: vc(20);
+				width: vc(24);
+				height: vc(24);
+
+				svg {
+					fill: $color-tree-poppy-400;
+				}
+			}
+		}
+	}
+
+	&__action {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: vc(40);
+
+		a {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-size: vc(16);
+			text-align: center;
+			gap: vc(18);
+
+			svg {
+				width: vc(30);
+				height: vc(30);
+				fill: $color-tree-poppy-400;
+			}
+		}
+	}
+
+	&__parts {
+		display: flex;
+		align-items: center;
+		margin-right: vc(40);
+		padding: vc(20);
+		font-weight: 500;
+		font-size:vc(16);
+		color: $color-black;
+		background: $color-tree-poppy-400;
+		gap: vc(20);
+
+		svg {
+			width: vc(34);
+			height: vc(34);
+			fill: $color-black;
+		}
+	}
+
+	&__top {
+		padding: vc(20) 0;
+		background: $color-woodsmoke-50;
+
+		.row {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&-links,
+		&-contacts {
+			display: flex;
+			gap: vc(50);
+
+			a {
+				position: relative;
+				display: flex;
+				align-items: center;
+				font-weight: 400;
+				font-size: vc(16);
+				gap: vc(10);
+
+				.svg {
+					border-radius: 100%;
+					padding: vc(5);
+					width: vc(24);
+					height: vc(24);
+					background: $color-woodsmoke-600;
+				}
+
+				svg {
+					fill: $color-white;
+				}
+			}
+		}
+	}
+
+	&__main {
+		padding: vc(20) 0;
+
+		.row {
+			display: grid;
+			grid-template-columns: vc(240) 5fr 1fr;
+			gap: vc(46);
+		}
+	}
+
+	&__nav {
+		background: $color-woodsmoke-800;
+
+		.row {
+			display: grid;
+			grid-template-columns: auto 1fr;
+		}
+
+		nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: vc(20) 0;
+			gap: vc(20);
+
+			a {
+				font-weight: 400;
+				font-size: vc(16);
+				color: $color-white;
+			}
+		}
+	}
+}

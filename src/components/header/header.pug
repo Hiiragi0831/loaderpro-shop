@@ -1,5 +1,46 @@
 - var dataHeader = require('data.js').default;
 header.header
-	h2 header
-	each item in dataHeader
-		a(href=item.link)!= item.title
+	.header__top
+		.container
+			.row
+				.header__top-links
+					a(href="#") Дилерам
+					a(href="#") Поставщикам
+				.header__top-contacts
+					a(href="mailto:zakaz@loaderpro.ru")
+						.svg
+							+svg('mail')
+						| zakaz@loaderpro.ru
+					a(href="tel:+78005511996")
+						.svg
+							+svg('phone')
+						| 8 (800) 551-19-96
+	.header__main
+		.container
+			.row
+				.header__logo
+					+svg('logo')
+				form.header__search
+					label
+						input(type="text" name="search" placeholder="Поиск товара")
+						button(type="submit")
+							+svg('magnifying-glass')
+				.header__action
+					a(href="#")
+						+svg('user')
+						| Войти
+					a(href="#")
+						+svg('heart')
+						| Избранное
+					a(href="#")
+						+svg('cart-shopping')
+						| Корзина
+	.header__nav
+		.container
+			.row
+				a.header__parts
+					+svg('bars')
+					| Запчасти
+				nav
+					each item in dataHeader
+						a(href=item.href)!= item.title
