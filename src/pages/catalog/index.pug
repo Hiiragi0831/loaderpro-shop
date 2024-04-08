@@ -9,8 +9,108 @@ block content
 	.site
 		include @components/header/header
 		main.catalog
-			section.home__looking
+			section.catalog__section
 				.container
 					.row
+						.catalog__filters
+							form.form
+								fieldset
+									legend Фильтры
+								+select({
+									placeholder: 'Бренд',
+									name: 'brand',
+									items: [
+										{
+											value: '0',
+											label: 'Бренд 1'
+										},
+										{
+											value: '1',
+											label: 'Бренд 2'
+										},
+										{
+											value: '2',
+											selected: true,
+											label: 'Бренд 3'
+										},
+									],
+								})
+								+select({
+									placeholder: 'Категория',
+									name: 'category',
+									items: [
+										{
+											value: '0',
+											selected: true,
+											label: 'Категория 1'
+										},
+										{
+											value: '1',
+											label: 'Категория 2'
+										},
+										{
+											value: '2',
+											label: 'Категория 3'
+										},
+									],
+								})
+								button.button.button__primary(type="submit") Применить
+						.catalog__products
+							.catalog__sort
+								p.catalog__sort-title Сортировка:
+								button.catalog__sort-item.is-active(title="Популярные") Популярные
+								button.catalog__sort-item(title="Новинки") Новинки
+								button.catalog__sort-item(title="Сначала дешевые") Сначала дешевые
+								button.catalog__sort-item(title="Сначала дорогие") Сначала дорогие
+								button.catalog__sort-item(title="Высокий рейтинг") Высокий рейтинг
+								button.catalog__sort-item(title="По размеру скидки") По размеру скидки
+							.catalog__products-row
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+								+product()
+			section.home__product
+				.container
+					.title
+						h1 Вы уже смотрели
+					.row
+						+product()
+						+product()
+						+product()
+						+product()
+						+product()
+			section.home__advantage
+				.container
+					.row
+						include @components/advantage/advantage
+			section.home__article
+				.container
+					.title
+						h1 Полезная информация
+					.row
+						+article({
+							title: 'Как выбрать тележку для склада?',
+							text: 'Если вам необходимо выбрать гидравлическую тележку для склада - ознакомьтесь с рекоме...'
+						})
+						+article({
+							title: 'Правила хранения запчастей',
+							text: 'Хранение и обслуживание запчастей играет критическую роль в обеспечении эффективной...'
+						})
+						+article({
+							title: '5 ошибок при ремонте погрузчика',
+							text: 'Мы собрали 5 самых распространенных ошибок, которые допускают во время ремонта вилочных...'
+						})
+						+article({
+							title: '10 фактов о погрузчиках',
+							text: 'Интересные факты о вилочных погрузчиках которые вы могли не знать...'
+						})
 
 		include @components/footer/footer
