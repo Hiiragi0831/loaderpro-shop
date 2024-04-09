@@ -2,47 +2,4 @@
 	&__slider {
 		margin: vc(45) 0;
 	}
-
-	&__product,
-	&__pop-category {
-		margin: vc(60) 0;
-
-		.row {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-			gap: vc(14);
-
-			@include devices {
-				grid-template-columns: 1fr;
-			}
-		}
-	}
-
-	&__advantage {
-		margin: vc(60) 0;
-
-		.row {
-			display: grid;
-			grid-template-columns: 1.2fr 0.8fr;
-			gap: vc(26);
-
-			@include devices {
-				grid-template-columns: 1fr;
-			}
-		}
-	}
-
-	&__article {
-		margin: vc(60) 0  vc(80);
-
-		.row {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			gap: vc(40);
-
-			@include devices {
-				grid-template-columns: 1fr;
-			}
-		}
-	}
 }

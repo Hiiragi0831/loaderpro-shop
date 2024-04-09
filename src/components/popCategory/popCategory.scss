@@ -7,6 +7,20 @@
 	min-height: vc(340);
 	transition: opacity $transition;
 
+	&__section {
+		margin: vc(60) 0;
+
+		.row {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: vc(14);
+
+			@include devices {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+
 	&__bg {
 		position: absolute;
 		width: 100%;

@@ -11,7 +11,7 @@ block content
 		main.home
 			section.home__slider
 				+main-slider()
-			section.home__pop-category
+			section.popCategory__section
 				.container
 					.title
 						h1 Популярные категории
@@ -21,7 +21,7 @@ block content
 						include @components/popCategory/popCategory
 						include @components/popCategory/popCategory
 						include @components/popCategory/popCategory
-			section.home__product
+			section.product__section
 				.container
 					.title
 						h1 Часто ищут
@@ -32,7 +32,7 @@ block content
 						+product({status: 'orange'})
 						+product({status: 'red'})
 						+product({cache: true})
-			section.home__product
+			section.product__section
 				.container
 					.title
 						h1 В наличии
@@ -43,11 +43,11 @@ block content
 						+product()
 						+product()
 						+product()
-			section.home__advantage
+			section.advantage__section
 				.container
 					.row
 						include @components/advantage/advantage
-			section.home__article
+			section.article__section
 				.container
 					.title
 						h1 Полезная информация

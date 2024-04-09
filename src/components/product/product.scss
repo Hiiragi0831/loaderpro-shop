@@ -8,6 +8,20 @@
 	background: $color-white;
 	gap: vc(12);
 
+	&__section {
+		margin: vc(60) 0;
+
+		.row {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: vc(14);
+
+			@include devices {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+
 	&__cache {
 		position: absolute;
 		left: vc(12);

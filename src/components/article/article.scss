@@ -1,4 +1,18 @@
 .article {
+	&__section {
+		margin: vc(60) 0  vc(80);
+
+		.row {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: vc(40);
+
+			@include devices {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+
 	&__img {
 		overflow: hidden;
 		margin-bottom: vc(14);
