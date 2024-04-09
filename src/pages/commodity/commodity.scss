@@ -1,5 +1,7 @@
 .commodity {
-	padding-bottom: vc(60);
+	&__section {
+		margin: vc(60) 0;
+	}
 
 	&__head {
 		display: flex;
@@ -58,10 +60,6 @@
 				background: $red-orange-500;
 			}
 		}
-	}
-
-	&__article {
-		font-size: vc(18);
 	}
 
 	&__main {
@@ -129,6 +127,110 @@
 					background: $color-tree-poppy-400;
 				}
 			}
+		}
+	}
+
+	&__info {
+		display: grid;
+		grid-template-areas:
+			"info price"
+			"description description";
+		grid-template-columns: vc(500) 1fr;
+		height: fit-content;
+		gap: vc(30);
+
+		&-box {
+			grid-area: info;
+		}
+	}
+
+	&__specifications {
+		display: flex;
+		flex-direction: column;
+		margin-top: vc(24);
+	}
+
+	&__specification {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px dashed $color-black;
+		padding: vc(6) 0;
+		font-weight: 400;
+		font-size: vc(14);
+
+		span {
+			color: $color-woodsmoke-600;
+		}
+
+		&:last-child {
+			border: none;
+		}
+	}
+
+	&__basket {
+		display: grid;
+		grid-area: price;
+		grid-auto-rows: min-content;
+		grid-template-columns: repeat(2, 1fr);
+		border-radius: vc(5);
+		padding: vc(30) vc(20);
+		height: min-content;
+		box-shadow: $box-shadow;
+		gap: vc(15);
+
+		@include devices {
+			order: 0;
+		}
+	}
+
+	&__price {
+		grid-column: span 2 / span 1;
+
+		span {
+			color: $color-woodsmoke-400;
+		}
+
+		p {
+			font-weight: 700;
+			font-size: vc(30);
+			color: $color-tree-poppy-400;
+		}
+	}
+
+	&__count {
+		display: flex;
+		border: 1px solid $color-woodsmoke-200;
+
+		input {
+			border-right: 1px solid $color-woodsmoke-200;
+			border-left: 1px solid $color-woodsmoke-200;
+			width: vc(80);
+			text-align: center;
+
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				appearance: none;
+			}
+		}
+
+		button {
+			width: vc(35);
+		}
+	}
+
+	&__description {
+		display: flex;
+		flex-direction: column;
+		grid-area: description;
+		gap: vc(20);
+
+		h5 {
+			font-weight: 400;
+			font-size: vc(18);
+		}
+
+		p {
+			font-size: vc(16);
 		}
 	}
 }

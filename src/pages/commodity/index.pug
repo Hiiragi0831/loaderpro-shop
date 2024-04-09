@@ -8,18 +8,13 @@ append vars
 block content
 	.site
 		include @components/header/header
-		main
-			section.commodity
+		main.commodity
+			section.commodity__section
 				.container
 					.row
 						.commodity__head
 							.commodity__title
 								h1 Название товара
-							.commodity__availability.commodity__availability--green
-								span
-								p В наличии ( 18 шт )
-							.commodity__article
-								p #[b Артикул:] 8776549823
 						.commodity__main
 							.commodity__gallery
 								.commodity__gallery-main
@@ -40,5 +35,71 @@ block content
 														path: `${baseDir}assets/images/image_1`,
 														ext: 'png',
 													})
+
+							.commodity__info
+								.commodity__info-box
+									.commodity__availability.commodity__availability--green
+										span
+										p В наличии ( 18 шт )
+									.commodity__specifications
+										.commodity__specification
+											p Бренд
+											span JUNGHEINRICH
+										.commodity__specification
+											p Бренд
+											span JUNGHEINRICH
+										.commodity__specification
+											p Бренд
+											span JUNGHEINRICH
+										.commodity__specification
+											p Бренд
+											span JUNGHEINRICH
+								.commodity__description
+									h5 Описание
+									p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+								.commodity__basket
+									.commodity__price
+										span Цена:
+										p 15000₽
+									.commodity__count
+										button.commodity__count-minus -
+										input(type="number" name="count" value="1" max="100")
+										button.commodity__count-plus +
+									button.button.button__primary В корзину
+			section.product__section
+				.container
+					.title
+						h1 Вы уже смотрели
+					.row
+						+product()
+						+product()
+						+product()
+						+product()
+						+product()
+			section.advantage__section
+				.container
+					.row
+						include @components/advantage/advantage
+			section.article__section
+				.container
+					.title
+						h1 Полезная информация
+					.row
+						+article({
+							title: 'Как выбрать тележку для склада?',
+							text: 'Если вам необходимо выбрать гидравлическую тележку для склада - ознакомьтесь с рекоме...'
+						})
+						+article({
+							title: 'Правила хранения запчастей',
+							text: 'Хранение и обслуживание запчастей играет критическую роль в обеспечении эффективной...'
+						})
+						+article({
+							title: '5 ошибок при ремонте погрузчика',
+							text: 'Мы собрали 5 самых распространенных ошибок, которые допускают во время ремонта вилочных...'
+						})
+						+article({
+							title: '10 фактов о погрузчиках',
+							text: 'Интересные факты о вилочных погрузчиках которые вы могли не знать...'
+						})
 
 		include @components/footer/footer
