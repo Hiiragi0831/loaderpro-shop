@@ -45,4 +45,12 @@
 		text-decoration-line: underline;
 		color: $color-tree-poppy-400;
 	}
+
+	&__more {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: vc(60);
+		width: 100%;
+	}
 }

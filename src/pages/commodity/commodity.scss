@@ -68,6 +68,10 @@
 		grid-template-columns: vc(656) 1fr;
 		margin-top: vc(40);
 		gap: vc(30);
+
+		@include devices {
+			grid-template-columns: 100%;
+		}
 	}
 
 	&__gallery {
@@ -95,6 +99,10 @@
 
 			.swiper {
 				height: 100%;
+			}
+
+			@include devices {
+				height: vc(320);
 			}
 		}
 
@@ -128,6 +136,10 @@
 				}
 			}
 		}
+
+		@include devices {
+			height: vc(372);
+		}
 	}
 
 	&__info {
@@ -141,6 +153,14 @@
 
 		&-box {
 			grid-area: info;
+		}
+
+		@include devices {
+			grid-template-areas:
+				"price"
+				"info"
+				"description";
+			grid-template-columns: 1fr;
 		}
 	}
 
