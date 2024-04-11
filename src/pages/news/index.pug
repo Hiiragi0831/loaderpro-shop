@@ -43,5 +43,25 @@ block content
 							li Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
 							li Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
 							li Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-
+			section.article__section
+				.container
+					.title
+						p.h1 Читайте так же
+					.row
+						+article({
+							title: 'Как выбрать тележку для склада?',
+							text: 'Если вам необходимо выбрать гидравлическую тележку для склада - ознакомьтесь с рекоме...'
+						})
+						+article({
+							title: 'Правила хранения запчастей',
+							text: 'Хранение и обслуживание запчастей играет критическую роль в обеспечении эффективной...'
+						})
+						+article({
+							title: '5 ошибок при ремонте погрузчика',
+							text: 'Мы собрали 5 самых распространенных ошибок, которые допускают во время ремонта вилочных...'
+						})
+						+article({
+							title: '10 фактов о погрузчиках',
+							text: 'Интересные факты о вилочных погрузчиках которые вы могли не знать...'
+						})
 		include @components/footer/footer
