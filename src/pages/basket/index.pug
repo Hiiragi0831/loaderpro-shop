@@ -1,0 +1,45 @@
+extends @pug/base
+
+append globals
+	- pageName = 'basket'
+
+append vars
+
+block content
+	.site
+		include @components/header/header
+		main
+			section.basket
+				.container
+					h1 Корзина
+					.row
+						.basket__table
+							.basket__table-th
+								p Название товара
+								p Стоимость
+								p Количество
+								p Всего
+								p
+							.basket-item
+								.basket-item__img
+									+picture({
+										path: `${baseDir}assets/images/basket`,
+										ext: 'jpg',
+									})
+								.basket-item__info
+									p Название товара, пример текста
+									span Артикул: #[mark 8776549823]
+								.basket-item__price
+									p 8 000 руб.
+								.basket-item__count
+									button.basket-item__count-minus -
+									input(type="number" name="count" value="1" max="100")
+									button.basket-item__count-plus +
+								.basket-item__sum
+									p 16 000 руб.
+								.basket-item__del
+									button
+										+svg('trash-can')
+						.basket__form
+
+		include @components/footer/footer
