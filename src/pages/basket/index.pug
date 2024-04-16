@@ -21,11 +21,48 @@ block content
 								p Всего
 								p
 							.basket-item
-								.basket-item__img
-									+picture({
-										path: `${baseDir}assets/images/basket`,
-										ext: 'jpg',
-									})
+								+picture({
+									path: `${baseDir}assets/images/basket`,
+									ext: 'jpg',
+								}).basket-item__img
+								.basket-item__info
+									p Название товара, пример текста
+									span Артикул: #[mark 8776549823]
+								.basket-item__price
+									p 8 000 руб.
+								.basket-item__count
+									button.basket-item__count-minus -
+									input(type="number" name="count" value="1" max="100")
+									button.basket-item__count-plus +
+								.basket-item__sum
+									p 16 000 руб.
+								.basket-item__del
+									button
+										+svg('trash-can')
+							.basket-item
+								+picture({
+									path: `${baseDir}assets/images/basket`,
+									ext: 'jpg',
+								}).basket-item__img
+								.basket-item__info
+									p Название товара, пример текста
+									span Артикул: #[mark 8776549823]
+								.basket-item__price
+									p 8 000 руб.
+								.basket-item__count
+									button.basket-item__count-minus -
+									input(type="number" name="count" value="1" max="100")
+									button.basket-item__count-plus +
+								.basket-item__sum
+									p 16 000 руб.
+								.basket-item__del
+									button
+										+svg('trash-can')
+							.basket-item
+								+picture({
+									path: `${baseDir}assets/images/basket`,
+									ext: 'jpg',
+								}).basket-item__img
 								.basket-item__info
 									p Название товара, пример текста
 									span Артикул: #[mark 8776549823]
@@ -41,5 +78,130 @@ block content
 									button
 										+svg('trash-can')
 						.basket__form
+							.basket__form-sum
+								p Итого: #[span 11500 руб]
+								b Итого со скидкой: #[span 10 000 руб]
+							.basket__form-data
+								+select({
+									placeholder: 'Способ оплаты',
+									name: 'pay',
+									items: [
+										{
+											value: '0',
+											label: 'Оплата 1'
+										},
+										{
+											value: '1',
+											label: 'Оплата 2'
+										},
+										{
+											value: '2',
+											selected: true,
+											label: 'Оплата 3'
+										},
+									],
+								})
+								+select({
+									placeholder: 'Доставка',
+									name: 'delivery',
+									items: [
+										{
+											value: '0',
+											label: 'Доставка 1'
+										},
+										{
+											value: '1',
+											label: 'Доставка 2'
+										},
+										{
+											value: '2',
+											selected: true,
+											label: 'Доставка 3'
+										},
+									],
+								})
+								+select({
+									placeholder: 'Доставка',
+									name: 'delivery',
+									items: [
+										{
+											value: '0',
+											label: 'Доставка 1'
+										},
+										{
+											value: '1',
+											label: 'Доставка 2'
+										},
+										{
+											value: '2',
+											selected: true,
+											label: 'Доставка 3'
+										},
+									],
+								})
+								+select({
+									placeholder: 'Перевозчик',
+									name: 'transport',
+									items: [
+										{
+											value: '0',
+											label: 'Перевозчик 1'
+										},
+										{
+											value: '1',
+											label: 'Перевозчик 2'
+										},
+										{
+											value: '2',
+											selected: true,
+											label: 'Перевозчик 3'
+										},
+									],
+								})
+								+select({
+									placeholder: 'Метод доставки',
+									name: 'method',
+									items: [
+										{
+											value: '0',
+											label: 'Метод доставки 1'
+										},
+										{
+											value: '1',
+											label: 'Метод доставки 2'
+										},
+										{
+											value: '2',
+											selected: true,
+											label: 'Метод доставки 3'
+										},
+									],
+								})
+								+input({
+									type: 'text',
+									placeholder: 'Адрес',
+									name: 'address',
+									value: 'Санкт-Петербург, Херсонская 2',
+								})
+								+select({
+									placeholder: 'Приоритет отгрузки',
+									name: 'method',
+									items: [
+										{
+											value: '0',
+											label: 'Приоритет отгрузки 1'
+										},
+										{
+											value: '1',
+											label: 'Приоритет отгрузки 2'
+										},
+										{
+											value: '2',
+											selected: true,
+											label: 'Приоритет отгрузки 3'
+										},
+									],
+								})
+								button.button.button__primary Оформить заказ
 
 		include @components/footer/footer

@@ -1,6 +1,12 @@
 .basket {
 	margin: vc(30) 0;
 
+	.row {
+		display: grid;
+		grid-template-columns: 1fr vc(360);
+		gap: vc(50);
+	}
+
 	&__table {
 		display: flex;
 		flex-direction: column;
@@ -25,6 +31,39 @@
 			}
 		}
 	}
+
+	&__form {
+		padding: vc(20);
+		box-shadow: $box-shadow;
+
+		&-sum {
+			display: flex;
+			flex-direction: column;
+			border-bottom: 1px solid $color-woodsmoke-100;
+			padding-bottom: vc(20);
+			gap: vc(10);
+
+			p,
+			b {
+				display: flex;
+				justify-content: space-between;
+				font-weight: 400;
+				font-size: vc(16);
+				line-height: vc(18);
+			}
+
+			b {
+				font-weight: 600;
+			}
+		}
+
+		&-data {
+			display: flex;
+			flex-direction: column;
+			padding: vc(20) 0 0 0;
+			gap: vc(16);
+		}
+	}
 }
 
 .basket-item {
@@ -32,12 +71,10 @@
 	align-items: center;
 	justify-content: space-between;
 	grid-template-columns: vc(125) 1fr vc(200) vc(154) vc(200) vc(30);
+	border-bottom: 1px solid $color-black;
+	padding: vc(14) 0;
 	width: 100%;
 	gap: vc(20);
-
-	&__img {
-
-	}
 
 	&__info {
 		display: flex;
