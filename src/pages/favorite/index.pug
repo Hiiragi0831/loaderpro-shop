@@ -1,0 +1,38 @@
+extends @pug/base
+
+append globals
+	- pageName = 'home'
+
+append vars
+
+block content
+	.site
+		include @components/header/header
+		main
+			section.account
+				.container
+					.row
+						.account__panel
+							+picture({
+								path: `${baseDir}assets/images/basket`,
+								ext: 'jpg',
+							})
+							p Имя Фамилия
+							nav
+								a(href="#") Личная информация
+								a(href="#") История заказов
+								a.is-active(href="#") Избранное
+								button Выйти
+						.account__tab
+							.account__title
+								h1 Личный кабинет
+								small Избранное
+							.account__favorite
+								+product({heat: true})
+								+product({heat: true})
+								+product({heat: true})
+								+product({heat: true})
+								+product({heat: true})
+								+product({heat: true})
+
+		include @components/footer/footer

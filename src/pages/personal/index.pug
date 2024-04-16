@@ -1,0 +1,113 @@
+extends @pug/base
+
+append globals
+	- pageName = 'home'
+
+append vars
+
+block content
+	.site
+		include @components/header/header
+		main
+			section.account
+				.container
+					.row
+						.account__panel
+							+picture({
+								path: `${baseDir}assets/images/basket`,
+								ext: 'jpg',
+							})
+							p Имя Фамилия
+							nav
+								a.is-active(href="#") Личная информация
+								a(href="#") История заказов
+								a(href="#") Избранное
+								button Выйти
+						.account__tab
+							.account__title
+								h1 Личный кабинет
+								small Личная информация
+							.account__personal
+								.account__personal-item
+									p Контактные данные
+									.account__personal-forms
+										+input({
+											type: 'text',
+											placeholder: 'Фамилия',
+											name: 'lastname',
+											value: 'Привалов',
+										})
+										+input({
+											type: 'text',
+											placeholder: 'Имя',
+											name: 'firstname',
+											value: 'Алексей',
+										})
+										+input({
+											type: 'text',
+											placeholder: 'Отчество',
+											name: 'middlename',
+											value: 'Васильевич',
+										})
+										+input({
+											type: 'email',
+											placeholder: 'Почта',
+											name: 'email',
+											value: 'example@gmail.com',
+										})
+										+input({
+											type: 'tel',
+											placeholder: 'Телефон',
+											name: 'tel',
+											value: '+7 (900) 392-43-34',
+										})
+										+input({
+											type: 'text',
+											placeholder: 'Telegram',
+											name: 'telegram',
+											value: '@privalov',
+										})
+								.account__personal-item
+									p Данные о компании
+									.account__personal-forms
+										+input({
+											type: 'text',
+											placeholder: 'ИНН',
+											name: 'inn',
+											value: '1243567545',
+										})
+										+input({
+											type: 'text',
+											placeholder: 'БИК банка',
+											name: 'bik',
+											value: '234564',
+										})
+										+input({
+											type: 'text',
+											placeholder: 'Расчетный счет',
+											name: 'payment',
+											value: '40702810680060657001',
+										})
+								.account__personal-item
+									p Смена  пароля
+									.account__personal-forms
+										+input({
+											type: 'password',
+											placeholder: 'Старый пароль',
+											name: 'oldpass',
+											value: '1243567545',
+										})
+										+input({
+											type: 'password',
+											placeholder: 'Новый пароль',
+											name: 'newpass',
+											value: 'dkfjnJdk3',
+										})
+										+input({
+											type: 'password',
+											placeholder: 'Повторите  пароль',
+											name: 'repeatpass',
+											value: 'dkfjnJdk3',
+										})
+
+		include @components/footer/footer

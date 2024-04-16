@@ -1,0 +1,32 @@
+extends @pug/base
+
+append globals
+	- pageName = 'home'
+
+append vars
+
+block content
+	.site
+		include @components/header/header
+		main
+			section.account
+				.container
+					.row
+						.account__panel
+							+picture({
+								path: `${baseDir}assets/images/basket`,
+								ext: 'jpg',
+							})
+							p Имя Фамилия
+							nav
+								a(href="#") Личная информация
+								a.is-active(href="#") История заказов
+								a(href="#") Избранное
+								button Выйти
+						.account__tab
+							.account__title
+								h1 Личный кабинет
+								small История заказов
+							.account__history
+
+		include @components/footer/footer
