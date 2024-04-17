@@ -1,0 +1,83 @@
+mixin order(data = {})
+	.order&attributes(attributes)
+		.order__title Заказ № 124332345
+		.order__row
+			.order__col
+				p
+					+svg('pin')
+					span Доставка
+				ul
+					li Перевозчик: Деловые Линии
+					li Метод доставки: до дверей
+					li Адрес доставки: СПБ, Кубинская 75
+					li Приоритет отгрузки: отгрузить полностью
+			.order__col
+				p
+					+svg('user')
+					span Получатель
+				ul
+					li Имя: Алексей
+					li Фамилия: Привалов
+					li Телефон, +7 (960) 266-76-26
+					li E-mail: privalov@loaderpro.ru
+			.order__col
+				p
+					+svg('credit-card')
+					span Оплата
+				ul
+					li Оплата картой: ***********345
+			.order__col
+				.order__status
+					p Статус:
+					span Отгружен
+				.order__button
+					button.button.button__primary!= data.active? 'Скрыть': 'Подробнее'
+		.order__products(class=data.active? 'is-active': 'is-hidden')
+			.basket__table
+				.basket__table-th
+					p Название товара
+					p Стоимость
+					p Количество
+					p Всего
+				.basket-item
+					+picture({
+						path: `${baseDir}assets/images/basket`,
+						ext: 'jpg',
+					}).basket-item__img
+					.basket-item__info
+						p Название товара, пример текста
+						span Артикул: #[mark 8776549823]
+					.basket-item__price
+						p 8 000 руб.
+					.basket-item__count
+						p 3
+					.basket-item__sum
+						p 16 000 руб.
+				.basket-item
+					+picture({
+						path: `${baseDir}assets/images/basket`,
+						ext: 'jpg',
+					}).basket-item__img
+					.basket-item__info
+						p Название товара, пример текста
+						span Артикул: #[mark 8776549823]
+					.basket-item__price
+						p 8 000 руб.
+					.basket-item__count
+						p 3
+					.basket-item__sum
+						p 16 000 руб.
+				.basket-item
+					+picture({
+						path: `${baseDir}assets/images/basket`,
+						ext: 'jpg',
+					}).basket-item__img
+					.basket-item__info
+						p Название товара, пример текста
+						span Артикул: #[mark 8776549823]
+					.basket-item__price
+						p 8 000 руб.
+					.basket-item__count
+						p 3
+					.basket-item__sum
+						p 16 000 руб.

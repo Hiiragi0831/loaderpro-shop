@@ -28,5 +28,26 @@ block content
 								h1 Личный кабинет
 								small История заказов
 							.account__history
-
+								.account__history-select
+									+select({
+										placeholder: 'Статус',
+										name: 'status',
+										items: [
+											{
+												value: '0',
+												selected: true,
+												label: 'Все заказы'
+											},
+											{
+												value: '1',
+												label: 'Статус 2'
+											},
+											{
+												value: '2',
+												label: 'Статус 3'
+											},
+										],
+									})
+								+order()
+								+order({active: true})
 		include @components/footer/footer

@@ -110,4 +110,15 @@
 			grid-template-columns: 100%;
 		}
 	}
+
+	&__history {
+		display: flex;
+		flex-direction: column;
+		padding-top: vc(20);
+		gap: vc(30);
+
+		&-select {
+			width: vc(500);
+		}
+	}
 }
