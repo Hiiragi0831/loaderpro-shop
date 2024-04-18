@@ -34,50 +34,51 @@ mixin order(data = {})
 					button.button.button__primary!= data.active? 'Скрыть': 'Подробнее'
 		.order__products(class=data.active? 'is-active': 'is-hidden')
 			.basket__table
-				.basket__table-th
-					p Название товара
-					p Стоимость
-					p Количество
-					p Всего
-				.basket-item
-					+picture({
-						path: `${baseDir}assets/images/basket`,
-						ext: 'jpg',
-					}).basket-item__img
-					.basket-item__info
-						p Название товара, пример текста
-						span Артикул: #[mark 8776549823]
-					.basket-item__price
-						p 8 000 руб.
-					.basket-item__count
-						p 3
-					.basket-item__sum
-						p 16 000 руб.
-				.basket-item
-					+picture({
-						path: `${baseDir}assets/images/basket`,
-						ext: 'jpg',
-					}).basket-item__img
-					.basket-item__info
-						p Название товара, пример текста
-						span Артикул: #[mark 8776549823]
-					.basket-item__price
-						p 8 000 руб.
-					.basket-item__count
-						p 3
-					.basket-item__sum
-						p 16 000 руб.
-				.basket-item
-					+picture({
-						path: `${baseDir}assets/images/basket`,
-						ext: 'jpg',
-					}).basket-item__img
-					.basket-item__info
-						p Название товара, пример текста
-						span Артикул: #[mark 8776549823]
-					.basket-item__price
-						p 8 000 руб.
-					.basket-item__count
-						p 3
-					.basket-item__sum
-						p 16 000 руб.
+				.basket__table-body
+					.basket__table-th
+						p Название товара
+						p Стоимость
+						p Количество
+						p Всего
+					.basket-item
+						+picture({
+							path: `${baseDir}assets/images/basket`,
+							ext: 'jpg',
+						}).basket-item__img
+						.basket-item__info
+							p Название товара, пример текста
+							span Артикул: #[mark 8776549823]
+						.basket-item__price
+							p 8 000 руб.
+						.basket-item__count
+							p 3
+						.basket-item__sum
+							p 16 000 руб.
+					.basket-item
+						+picture({
+							path: `${baseDir}assets/images/basket`,
+							ext: 'jpg',
+						}).basket-item__img
+						.basket-item__info
+							p Название товара, пример текста
+							span Артикул: #[mark 8776549823]
+						.basket-item__price
+							p 8 000 руб.
+						.basket-item__count
+							p 3
+						.basket-item__sum
+							p 16 000 руб.
+					.basket-item
+						+picture({
+							path: `${baseDir}assets/images/basket`,
+							ext: 'jpg',
+						}).basket-item__img
+						.basket-item__info
+							p Название товара, пример текста
+							span Артикул: #[mark 8776549823]
+						.basket-item__price
+							p 8 000 руб.
+						.basket-item__count
+							p 3
+						.basket-item__sum
+							p 16 000 руб.

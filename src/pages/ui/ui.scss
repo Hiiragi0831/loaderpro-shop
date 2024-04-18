@@ -11,7 +11,7 @@
 			gap: vc(14);
 
 			@include devices {
-				grid-template-columns: 1fr;
+				grid-template-columns: 100%;
 			}
 		}
 	}
@@ -24,7 +24,7 @@
 			gap: vc(80);
 
 			@include devices {
-				grid-template-columns: 1fr;
+				grid-template-columns: 100%;
 			}
 		}
 	}
@@ -36,7 +36,7 @@
 			gap: vc(26);
 
 			@include devices {
-				grid-template-columns: 1fr;
+				grid-template-columns: 100%;
 			}
 		}
 	}
@@ -48,7 +48,7 @@
 			gap: vc(14);
 
 			@include devices {
-				grid-template-columns: 1fr;
+				grid-template-columns: 100%;
 			}
 		}
 	}

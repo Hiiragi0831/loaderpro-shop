@@ -5,6 +5,10 @@
 		display: grid;
 		grid-template-columns: 1fr vc(360);
 		gap: vc(50);
+
+		@include devices {
+			grid-template-columns: 100%;
+		}
 	}
 
 	&__table {
@@ -29,6 +33,15 @@
 					text-align: left;
 				}
 			}
+		}
+
+		&-body {
+			min-width: vc(900);
+		}
+
+		@include devices {
+			overflow: auto;
+			width: 100%;
 		}
 	}
 
@@ -134,5 +147,9 @@
 		svg {
 			fill: $red-orange-500;
 		}
+	}
+
+	@include devices {
+		grid-template-columns: vc(125) 1fr vc(100) vc(154) vc(100) vc(30);
 	}
 }

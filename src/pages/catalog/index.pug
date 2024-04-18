@@ -57,13 +57,14 @@ block content
 								button.button.button__primary(type="submit") Применить
 						.catalog__products
 							.catalog__sort
-								p.catalog__sort-title Сортировка:
-								button.catalog__sort-item.is-active(title="Популярные") Популярные
-								button.catalog__sort-item(title="Новинки") Новинки
-								button.catalog__sort-item(title="Сначала дешевые") Сначала дешевые
-								button.catalog__sort-item(title="Сначала дорогие") Сначала дорогие
-								button.catalog__sort-item(title="Высокий рейтинг") Высокий рейтинг
-								button.catalog__sort-item(title="По размеру скидки") По размеру скидки
+								.catalog__sort-wrapper
+									p.catalog__sort-title Сортировка:
+									button.catalog__sort-item.is-active(title="Популярные") Популярные
+									button.catalog__sort-item(title="Новинки") Новинки
+									button.catalog__sort-item(title="Сначала дешевые") Сначала дешевые
+									button.catalog__sort-item(title="Сначала дорогие") Сначала дорогие
+									button.catalog__sort-item(title="Высокий рейтинг") Высокий рейтинг
+									button.catalog__sort-item(title="По размеру скидки") По размеру скидки
 							.catalog__products-row
 								+product()
 								+product()

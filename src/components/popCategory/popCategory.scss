@@ -16,7 +16,7 @@
 			gap: vc(14);
 
 			@include devices {
-				grid-template-columns: 1fr;
+				grid-template-columns: 100%;
 			}
 		}
 	}

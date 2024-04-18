@@ -8,7 +8,7 @@
 			gap: vc(14);
 
 			@include devices {
-				grid-template-columns: 1fr;
+				grid-template-columns: 100%;
 			}
 		}
 	}
@@ -41,20 +41,30 @@
 			gap: vc(14);
 
 			@include devices {
-				grid-template-columns: 1fr;
+				grid-template-columns: 100%;
 			}
 		}
 	}
 
 	&__sort {
-		display: flex;
-		justify-content: space-between;
+		overflow: auto;
 		border-top: 1px solid $color-woodsmoke-200;
 		border-bottom: 1px solid $color-woodsmoke-200;
 		padding: vc(18);
 		width: 100%;
-		font-size: vc(18);
-		gap: vc(18);
+
+		&-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			font-size: vc(18);
+			gap: vc(18);
+
+			@include devices {
+				min-width: vc(900);
+			}
+		}
 
 		&-title {
 			font-weight: 500;

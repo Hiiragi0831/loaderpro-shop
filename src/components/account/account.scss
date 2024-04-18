@@ -97,6 +97,10 @@
 			grid-template-columns: repeat(3, 1fr);
 			margin-top: vc(20);
 			gap: vc(40);
+
+			@include devices {
+				grid-template-columns: repeat(1, 1fr);
+			}
 		}
 	}
 

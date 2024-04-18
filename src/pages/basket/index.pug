@@ -14,69 +14,70 @@ block content
 					h1 Корзина
 					.row
 						.basket__table
-							.basket__table-th
-								p Название товара
-								p Стоимость
-								p Количество
-								p Всего
-								p
-							.basket-item
-								+picture({
-									path: `${baseDir}assets/images/basket`,
-									ext: 'jpg',
-								}).basket-item__img
-								.basket-item__info
-									p Название товара, пример текста
-									span Артикул: #[mark 8776549823]
-								.basket-item__price
-									p 8 000 руб.
-								.basket-item__count
-									button.basket-item__count-minus -
-									input(type="number" name="count" value="1" max="100")
-									button.basket-item__count-plus +
-								.basket-item__sum
-									p 16 000 руб.
-								.basket-item__del
-									button
-										+svg('trash-can')
-							.basket-item
-								+picture({
-									path: `${baseDir}assets/images/basket`,
-									ext: 'jpg',
-								}).basket-item__img
-								.basket-item__info
-									p Название товара, пример текста
-									span Артикул: #[mark 8776549823]
-								.basket-item__price
-									p 8 000 руб.
-								.basket-item__count
-									button.basket-item__count-minus -
-									input(type="number" name="count" value="1" max="100")
-									button.basket-item__count-plus +
-								.basket-item__sum
-									p 16 000 руб.
-								.basket-item__del
-									button
-										+svg('trash-can')
-							.basket-item
-								+picture({
-									path: `${baseDir}assets/images/basket`,
-									ext: 'jpg',
-								}).basket-item__img
-								.basket-item__info
-									p Название товара, пример текста
-									span Артикул: #[mark 8776549823]
-								.basket-item__price
-									p 8 000 руб.
-								.basket-item__count
-									button.basket-item__count-minus -
-									input(type="number" name="count" value="1" max="100")
-									button.basket-item__count-plus +
-								.basket-item__sum
-									p 16 000 руб.
-								.basket-item__del
-									button
-										+svg('trash-can')
+							.basket__table-body
+								.basket__table-th
+									p Название товара
+									p Стоимость
+									p Количество
+									p Всего
+									p
+								.basket-item
+									+picture({
+										path: `${baseDir}assets/images/basket`,
+										ext: 'jpg',
+									}).basket-item__img
+									.basket-item__info
+										p Название товара, пример текста
+										span Артикул: #[mark 8776549823]
+									.basket-item__price
+										p 8 000 руб.
+									.basket-item__count
+										button.basket-item__count-minus -
+										input(type="number" name="count" value="1" max="100")
+										button.basket-item__count-plus +
+									.basket-item__sum
+										p 16 000 руб.
+									.basket-item__del
+										button
+											+svg('trash-can')
+								.basket-item
+									+picture({
+										path: `${baseDir}assets/images/basket`,
+										ext: 'jpg',
+									}).basket-item__img
+									.basket-item__info
+										p Название товара, пример текста
+										span Артикул: #[mark 8776549823]
+									.basket-item__price
+										p 8 000 руб.
+									.basket-item__count
+										button.basket-item__count-minus -
+										input(type="number" name="count" value="1" max="100")
+										button.basket-item__count-plus +
+									.basket-item__sum
+										p 16 000 руб.
+									.basket-item__del
+										button
+											+svg('trash-can')
+								.basket-item
+									+picture({
+										path: `${baseDir}assets/images/basket`,
+										ext: 'jpg',
+									}).basket-item__img
+									.basket-item__info
+										p Название товара, пример текста
+										span Артикул: #[mark 8776549823]
+									.basket-item__price
+										p 8 000 руб.
+									.basket-item__count
+										button.basket-item__count-minus -
+										input(type="number" name="count" value="1" max="100")
+										button.basket-item__count-plus +
+									.basket-item__sum
+										p 16 000 руб.
+									.basket-item__del
+										button
+											+svg('trash-can')
 						.basket__form
 							.basket__form-sum
 								p Итого: #[span 11500 руб]
