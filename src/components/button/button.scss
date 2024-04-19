@@ -76,4 +76,8 @@
 			background: $color-tree-poppy-400;
 		}
 	}
+
+	@include devices {
+		padding: vc(6) vc(10);
+	}
 }

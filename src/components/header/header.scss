@@ -8,8 +8,8 @@
 		}
 
 		@include devices {
-			width: vc(120);
-			height: vc(27);
+			width: vc(160);
+			height: vc(33);
 		}
 	}
 
@@ -67,6 +67,7 @@
 
 		@include devices {
 			grid-template-columns: repeat(3, vc(22));
+			margin-right: vc(15);
 			margin-left: auto;
 			gap: vc(15);
 
@@ -178,6 +179,7 @@
 
 			@include devices {
 				grid-template-columns: vc(120) 1fr vc(20);
+				gap: initial;
 			}
 		}
 
@@ -244,5 +246,9 @@
 		@include devices {
 			display: none;
 		}
+	}
+
+	@include devices {
+		border-bottom: 1px solid $color-woodsmoke-200;
 	}
 }
