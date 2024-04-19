@@ -100,10 +100,6 @@
 	&__article {
 		font-size: vc(12);
 		color: $color-woodsmoke-500;
-
-		@include devices {
-			align-self: flex-start;
-		}
 	}
 
 	&__price {
@@ -115,6 +111,11 @@
 			font-weight: 500;
 			font-size: vc(20);
 			color: $color-tree-poppy-400;
+
+			@include devices {
+				width: 100%;
+				text-align: center;
+			}
 		}
 
 		s {
