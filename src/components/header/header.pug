@@ -42,9 +42,6 @@ header.header
 	.header__nav
 		.container
 			.row
-				a.header__parts
-					+svg('bars')
-					| Запчасти
 				nav
 					each item in dataHeader
 						a(href=item.href title!= item.title)!= item.title
