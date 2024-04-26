@@ -23,7 +23,6 @@ export const HtmlPages = () =>
             minify: {
                 collapseWhitespace: !isDev(),
                 removeComments: !isDev(),
-                removeAttributeQuotes: !isDev(),
             },
         });
     });
