@@ -1,8 +1,11 @@
-mixin category(data)
-	.category
-		+svg(`${data.icon}`)
-		p!= data.title
-		.category__wrapper
-			.category__content
-				each link in data.links
-					a(href="#")!= link
+a.category
+	.category__bg
+		+picture({
+			path: `${baseDir}assets/images/category`,
+			ext: 'png',
+		})
+	.category__info
+		.category__title Запчасти ведущего моста
+		.category__button
+			span В каталог
+			+svg('right-arrow')

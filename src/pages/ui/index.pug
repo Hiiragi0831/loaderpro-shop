@@ -27,18 +27,18 @@ block content
 					.title
 						h1 Популярные категории
 					.row
-						include @components/popCategory/popCategory
-						include @components/popCategory/popCategory
-						include @components/popCategory/popCategory
-						include @components/popCategory/popCategory
-						include @components/popCategory/popCategory
+						include @components/category/category
+						include @components/category/category
+						include @components/category/category
+						include @components/category/category
+						include @components/category/category
 			section.ui__category
 				.container
 					.title
 						h1 Категории
 					.row
 						each item in data.category
-							+category(item)
+							+group(item)
 			section.ui__article
 				.container
 					.title

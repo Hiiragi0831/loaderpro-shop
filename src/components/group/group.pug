@@ -1,0 +1,8 @@
+mixin group(data)
+	.group
+		+svg(`${data.icon}`)
+		p!= data.title
+		.group__wrapper
+			.group__content
+				each link in data.links
+					a(href="#")!= link
