@@ -36,7 +36,9 @@ body {
 	text-decoration-skip: objects;
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
+	color: $color-black;
 	-webkit-tap-highlight-color: transparent;
+	background: $color-white;
 
 	&.is-resizing {
 		opacity: 0;
