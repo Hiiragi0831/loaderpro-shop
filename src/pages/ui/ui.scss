@@ -52,4 +52,12 @@
 			}
 		}
 	}
+
+	&__svg {
+		svg {
+			width: vc(100);
+			height: vc(100);
+			fill: $color-tree-poppy-400;
+		}
+	}
 }

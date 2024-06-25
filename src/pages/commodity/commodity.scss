@@ -217,6 +217,15 @@
 		}
 	}
 
+	&__input {
+		input {
+			border: 1px solid $color-woodsmoke-200;
+			border-radius: vc(5);
+			padding: vc(20);
+			height: 100%;
+		}
+	}
+
 	&__count {
 		display: flex;
 		border: 1px solid $color-woodsmoke-200;
